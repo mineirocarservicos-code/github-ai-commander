@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#111827"><meta name="description" content="Comandante de GitHub com IA — controle seus repositórios pelo celular.">
+<link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icon.svg">
+<link rel="stylesheet" href="styles.css"><title>GitHub AI Commander</title>
+</head>
+<body>
+<div class="app">
+<header class="topbar"><div><span class="eyebrow">GITHUB AI COMMANDER</span><h1>Comande seu código.</h1></div><div class="status"><span></span> Conectado</div></header>
+<main>
+<section class="card">
+<label for="repo">Repositório</label>
+<select id="repo"><option>mineirocarservicos-code/Vitrine</option><option>mineirocarservicos-code/gestormusicabox</option><option>mineirocarservicos-code/mineirocar</option><option>mineirocarservicos-code/github-ai-commander</option></select>
+<label for="branch">Branch</label><select id="branch"><option>main</option></select>
+</section>
+<section class="card command-card">
+<div class="section-title"><div><span class="eyebrow">COMANDO</span><h2>O que você quer alterar?</h2></div></div>
+<textarea id="command" placeholder="Ex.: No Vitrine, retire o botão de teste grátis dessa tela e coloque ele abaixo do formulário. Depois deixe o botão verde."></textarea>
+<div class="actions"><button id="mic" class="icon-btn" aria-label="Gravar comando">🎙️</button><button id="analyze" class="primary">Analisar comando</button></div>
+<div id="recording" class="recording hidden">● Gravando… <span id="timer">00:00</span></div>
+</section>
+<section id="preview" class="card preview hidden">
+<div class="section-title"><div><span class="eyebrow">PRÉVIA</span><h2>O que será feito</h2></div><span class="badge">Aguardando confirmação</span></div>
+<div class="change"><span class="dot"></span><div><strong id="previewTitle">Análise do comando</strong><p id="previewText"></p></div></div>
+<div class="files"><div class="file">📄 <span>Arquivos identificados pela IA</span><small>serão exibidos aqui</small></div></div>
+<div class="actions"><button id="cancel" class="secondary">Cancelar</button><button id="execute" class="primary">Confirmar e executar</button></div>
+</section>
+<section class="hint"><span>🔒</span><div><strong>Seguro por padrão</strong><p>O app mostra a prévia antes de qualquer alteração. Tokens e credenciais nunca ficam no navegador.</p></div></section>
+</main>
+<footer>GitHub AI Commander · primeira versão</footer>
+</div>
+<script src="app.js"></script>
+</body></html>
