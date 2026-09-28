@@ -1,0 +1,1 @@
+{"name":"github-ai-commander","version":"0.1.0","private":true,"description":"Mobile-first PWA for AI-assisted GitHub repository changes.","scripts":{"dev":"vercel dev","deploy":"vercel --prod"},"dependencies":{"@vercel/node":"latest"}}
